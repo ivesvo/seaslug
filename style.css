@@ -1,0 +1,167 @@
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 15%;
+      background: black;
+/*      background: linear-gradient(0deg, blue, black 90%);*/
+      text-align: center;
+/*      overflow: hidden;*/
+    }
+
+
+    canvas {
+      display: block;
+    }
+
+    @font-face {
+      font-family: Basteleur;
+      src: url(scr/fonts/Basteleur-Bold.woff2);
+    }
+
+
+    h1{
+        font-family: Basteleur;
+        font-size: 200px;
+        padding: 5rem;
+        color: antiquewhite;
+    }
+
+    p {
+        font-family: CirrusCumulus;
+        color: red;
+        font-size: 16;
+    }
+    #input {
+        display: inline;
+
+    }
+
+    #text{
+        color: white;
+    }
+
+    /*FISH ANIMATION*/
+    svg#fish {
+      top: 5em;
+    }
+    /* Fish Animation */
+    svg.fish{
+      overflow: hidden!important;
+    }
+
+    @-webkit-keyframes swim
+    {
+        0% {margin-left: -235px}
+        90% {margin-left: 100%;}
+        100% {margin-left: 100%;}
+    }
+
+    @keyframes swim
+    {
+        0% {margin-left: -235px}
+        70% {margin-left: 100%;}
+        100% {margin-left: 100%;}
+    }
+
+    .fish{
+        width: 235px;
+        height: 104px;
+        margin-left: -100px;
+        position: absolute;	
+        animation: swim 20s;
+        -webkit-animation: swim 20s;
+        animation-iteration-count: infinite;
+        -webkit-animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        -webkit-animation-timing-function: linear;
+    }
+
+    svg #fish1,
+    svg #fish2,
+    svg #fish3,
+    svg #fish4,
+    svg #fish5,
+    svg #fish6 {
+    fill:#528484;
+
+        -moz-animation: bounce 2s infinite;
+      -webkit-animation: bounce 2s infinite;
+      animation: bounce 2s infinite;
+    }
+
+    svg #fish2{
+        animation-delay: 10s;
+        -webkit-animation-delay: 10s;
+    }
+
+    svg #fish3{
+        animation-delay: 0.2s;
+        -webkit-animation-delay: 0.2s;
+    }
+
+    svg #fish4{
+        animation-delay: 0.4s;
+        -webkit-animation-delay: 0.4s;
+    }
+
+    svg #fish5{
+        animation-delay: 0.1s;
+        -webkit-animation-delay: 0.1s;
+    }
+
+    svg #fish6{
+        animation-delay: 0.3s;
+        -webkit-animation-delay: 0.3s;
+    }
+
+    /**/
+    @-moz-keyframes bounce {
+      0%, 50%, 100% {
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+      }
+      25% {
+        -moz-transform: translateY(-5px);
+        transform: translateY(-5px);
+      }
+      75% {
+        -moz-transform: translateY(-3px);
+        transform: translateY(-3px);
+      }
+    }
+    @-webkit-keyframes bounce {
+      0%, 50%, 100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+      25% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+      }
+      75% {
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+      }
+    }
+    @keyframes bounce {
+      0%, 50%, 100% {
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+      25% {
+        -moz-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+      }
+      75% {
+        -moz-transform: translateY(-3px);
+        -ms-transform: translateY(-3px);
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+      }
+    }
+
+    /*END Fish Animation*/  
