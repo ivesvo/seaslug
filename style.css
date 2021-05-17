@@ -1,19 +1,26 @@
     html, body {
       margin: 0;
       padding: 0;
-      height: 15%;
-      background: black;
-/*      background: linear-gradient(0deg, blue, black 90%);*/
+      height: 100%;
+ //     background: black;
+      background: linear-gradient(0deg, blue, white 40%);
       text-align: center;
 /*      overflow: hidden;*/
     }
 
+.container{
+    overflow: hidden!important;
+}
 
-    canvas {
-      display: block;
+
+.canvas {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
     }
 
-    @font-face {
+@font-face {
       font-family: Basteleur;
       src: url(scr/fonts/Basteleur-Bold.woff2);
     }
@@ -21,19 +28,30 @@
 
     h1{
         font-family: Basteleur;
-        font-size: 200px;
-        padding: 5rem;
-        color: antiquewhite;
+        font-size: 110px;
+        padding-top: 5rem;
+        color: blue;
     }
+
+.art{
+    font-size: 60px;
+
+}
 
     p {
-        font-family: CirrusCumulus;
-        color: red;
-        font-size: 16;
+        font-family: Arial Narrow;
+        color: blue;
+        font-size: 20px;
+        display: block;  
     }
+
+.description{
+    text-align: left;
+}
+
+
     #input {
         display: inline;
-
     }
 
     #text{
@@ -74,6 +92,7 @@
         -webkit-animation-iteration-count: infinite;
         animation-timing-function: linear;
         -webkit-animation-timing-function: linear;
+        overflow: hidden !important;
     }
 
     svg #fish1,
