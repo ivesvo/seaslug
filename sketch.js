@@ -16,7 +16,7 @@ let SIZE = 256 ,
     pix2pix,
     isProcessing = true;
 
-let song, sparkle;
+let song;
 
 let strokeSize;
 
@@ -29,8 +29,7 @@ function setup() {
 
     // music
     song = loadSound("/src/underwater.mp3", soundLoaded);
-    sparkle = loadSound("/src/sparkle.mp3", soundLoaded);
-    
+
     // draw background
     background(0);
 }
@@ -100,7 +99,6 @@ function runPix2Pix() {
         let rec_img = createImg(result.src, "a generated image using pix2pix").hide(); // hide the DOM element
         scale(0.5,0.5);
         image(rec_img, 512, 0); // draw the image on the canvas
-        sparkle.play();
         rec_img.remove(); // this removes the DOM element, as we don't need it anymore
     });
 }
