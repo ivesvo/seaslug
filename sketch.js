@@ -16,7 +16,7 @@ let SIZE = 256 ,
     pix2pix,
     isProcessing = true;
 
-let song;
+let song, statusMsg;
 
 let strokeSize;
 
@@ -32,6 +32,9 @@ function setup() {
 
     // draw background
     background(0);
+    
+    //status
+    statusMsg = select('#status');
 }
 
 function soundLoaded(){
@@ -61,6 +64,7 @@ function keyPressed() {
   }else if (keyCode === 67) {
       // press c to clear
       background(0);
+       statusMsg.html("Draw something!");
       //press + to make the brush bigger
   } else if (keyCode === 187){
       strokeSize++;
@@ -82,12 +86,14 @@ function mouseIsPressed(){
 function modelLoaded() {
     console.log('model loaded');
     isProcessing = false;
+    statusMsg.html("Draw something!");
 }
 
 function runPix2Pix() {
     // Update status message
     isProcessing = true;
     console.log("applying pix2pix");
+    statusMsg.html("Generating...");
 
     // pix2pix requires a canvas DOM element, we can get p5.js canvas and pass this
     // Select canvas DOM element, this is the p5.js canvas
@@ -96,6 +102,7 @@ function runPix2Pix() {
     // Apply pix2pix transformation
     pix2pix.transfer(canvasElement).then((result) => {
         isProcessing = false;
+         statusMsg.html("Niceeeee");
         let rec_img = createImg(result.src, "a generated image using pix2pix").hide(); // hide the DOM element
         scale(0.5,0.5);
         image(rec_img, 512, 0); // draw the image on the canvas

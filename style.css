@@ -33,6 +33,9 @@
 .art{
     font-size: 60px;
 }
+.credits{
+    text-align: right;
+}
 
     p {
         font-family: Arial Narrow;
